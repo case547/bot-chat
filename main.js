@@ -10,17 +10,15 @@ function setUserName() {
     if (!myName || myName === null) {
         setUserName();
     } else {
-        localStorage.setItem("name", myName);
-        // Create and store data item "name" = myName using localStorage API
+        sessionStorage.setItem("name", myName);
         userName.textContent = myName;
     }
 }
 
 if (!localStorage.getItem("name")) {
     setUserName();
-    // If "name" data doesn't exist, setUserName() is run to create it
 } else {
-    let storedName = localStorage.getItem("name");
+    let storedName = sessionStorage.getItem("name");
     userName.textContent = storedName;
 }
 
