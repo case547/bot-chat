@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-gb">
+    <head>
+        <meta charset="utf-8">
+        <title>Jankiest bot chat EUW</title>
+        <link rel="stylesheet" href="default.css">
+        <link rel="shortcut icon" href="favicon.png">
+        <script type="module" src="main.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>Chat with Robots 🤖</h1>
+        </header>
+
+        <main>
+            <h2 class="message-heading">Welcome, 
+                <span id="username" name="username"></span><span id="bot-title"></span>
+            </h2>
+            <section class="message-pane" id="messages">
+                <template id="my-message">
+                    <div name="message" class="from-me">Hello Robot</div>
+                </template>
+                <template id="their-message">
+                    <div name="message" class="from-them">Hello Humon</div>
+                </template>
+            </section>
+            <section>
+                <textarea id="composition" class="composition-pane"></textarea>
+                <button id="send-button" class="composition-send" >Send</button>
+            </section>
+        </main>
+
+        <nav>
+            <ul id="bot-list">
+                <template id="bot-listing">
+                    <li name="bot"> AgreeBot </li>
+                </template>
+            </ul>
+        <button>Change user</button>
+        </nav>
+    </body>
+</html>
