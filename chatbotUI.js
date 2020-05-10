@@ -17,16 +17,17 @@ chatbotUI.init = function (bots) {
         const response = bot.response(history);
         history.push(response);
 
-        // I prefer this method, using templates.
-        const myTemplate = cloneTemplate("my-message");
-        myTemplate.querySelector("[name=message]").textContent = myMessage;
-        messages.appendChild(myTemplate);
+        if (myMessage !== "") {
+            const myTemplate = cloneTemplate("my-message");
+            myTemplate.querySelector("[name=message]").textContent = myMessage;
+            messages.appendChild(myTemplate);
 
-        const theirTemplate = cloneTemplate("their-message");
-        const theirMessage = theirTemplate.querySelector("[name=message]");
-        theirMessage.textContent = response;
-        messages.appendChild(theirTemplate);
-        theirMessage.scrollIntoView();
+            const theirTemplate = cloneTemplate("their-message");
+            const theirMessage = theirTemplate.querySelector("[name=message]");
+            theirMessage.textContent = response;
+            messages.appendChild(theirTemplate);
+            theirMessage.scrollIntoView();
+        }
     };
 
     const botList = el("bot-list");
