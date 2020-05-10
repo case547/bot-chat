@@ -1,6 +1,6 @@
 const simpleBots = Object.create(null);
 
-let user = localStorage.getItem("name");
+let user = sessionStorage.getItem("name");
 
 const senateOptions = [
     `It's over, ${user}! I have the high ground!`,
