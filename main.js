@@ -30,9 +30,9 @@ window.addEventListener("DOMContentLoaded", function () {
     const bots = [
         ...Object.values(simpleBots),
         advancedBots.newCountdownBot({
-            name: "Allahu AkBot",
+            name: "Countdown",
             from: 5,
-            then: "ALLAHU AKBAR!!!"
+            then: "Boom"
         }),
         advancedBots.newMathBot()
     ];

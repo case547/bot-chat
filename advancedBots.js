@@ -27,14 +27,14 @@ advancedBots.newCountdownBot = function (spec) {
 advancedBots.newMathBot = function () {
 
     const hiddenFunction = function (x) {
-        return 69 * x;
+        return 42 * x;
     };
 
     return {
-        "name": "6bot9",
+        "name": "niceBot",
         "response": function (history) {
             const last = history[history.length - 1];
-            return `69 times ${history[history.length - 1]} is ` + hiddenFunction(last);
+            return `42 times ${history[history.length - 1]} is ` + hiddenFunction(last);
         }
     };
 };
