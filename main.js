@@ -2,30 +2,6 @@ import simpleBots from "./simpleBots.js";
 import advancedBots from "./advancedBots.js";
 import chatbotUI from "./chatbotUI.js";
 
-let myButton = document.querySelector("button");
-let userName = document.getElementById("username");
-
-function setUserName() {
-    let myName = prompt("Please enter your name.");
-    if (!myName || myName === null) {
-        setUserName();
-    } else {
-        localStorage.setItem("name", myName);
-        userName.textContent = myName;
-    }
-}
-
-if (!localStorage.getItem("name")) {
-    setUserName();
-} else {
-    let storedName = localStorage.getItem("name");
-    userName.textContent = storedName;
-}
-
-myButton.onclick = function () {
-    setUserName();
-};
-
 window.addEventListener("DOMContentLoaded", function () {
     const bots = [
         ...Object.values(simpleBots),

@@ -14,7 +14,8 @@ chatbotUI.init = function (bots) {
         const myMessage = composition.value;
         composition.value = "";
         history.push(myMessage);
-        const response = bot.response(history);
+        let user = localStorage.getItem("name");
+        const response = bot.response(history, user);
         history.push(response);
 
         if (myMessage !== "") {
@@ -52,6 +53,30 @@ chatbotUI.init = function (bots) {
             botName.onclick();
         }
     });
+
+    let myButton = document.getElementById("userchange");
+    let userName = document.getElementById("username");
+
+    function setUserName() {
+        const myName = prompt("Please enter your name.");
+        if (!myName || myName === null) {
+            setUserName();
+        } else {
+            localStorage.setItem("name", myName);
+            userName.textContent = myName;
+        }
+    }
+
+    if (!localStorage.getItem("name")) {
+        setUserName();
+    } else {
+        const storedName = localStorage.getItem("name");
+        userName.textContent = storedName;
+    }
+
+    myButton.onclick = function () {
+        setUserName();
+    };
 };
 
 export default Object.freeze(chatbotUI);
