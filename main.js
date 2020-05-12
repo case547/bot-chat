@@ -10,7 +10,7 @@ function setUserName() {
     if (!myName || myName === null) {
         setUserName();
     } else {
-        sessionStorage.setItem("name", myName);
+        localStorage.setItem("name", myName);
         userName.textContent = myName;
     }
 }
@@ -18,7 +18,7 @@ function setUserName() {
 if (!localStorage.getItem("name")) {
     setUserName();
 } else {
-    let storedName = sessionStorage.getItem("name");
+    let storedName = localStorage.getItem("name");
     userName.textContent = storedName;
 }
 
