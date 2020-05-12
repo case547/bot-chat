@@ -53,8 +53,8 @@ chatbotUI.init = function (bots) {
         }
     });
 
-    let myButton = document.el("userchange");
-    let userName = document.el("username");
+    let myButton = el("userchange");
+    let userName = el("username");
 
     function setUserName() {
         const myName = prompt("Please enter your name.");
