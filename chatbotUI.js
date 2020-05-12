@@ -1,7 +1,6 @@
 const chatbotUI = Object.create(null);
 
 chatbotUI.init = function (bots) {
-    // I always define this helpful shorthands.
     const el = (id) => document.getElementById(id);
     const cloneTemplate = (id) => document.importNode(el(id).content, true);
 
@@ -54,8 +53,8 @@ chatbotUI.init = function (bots) {
         }
     });
 
-    let myButton = document.getElementById("userchange");
-    let userName = document.getElementById("username");
+    let myButton = document.el("userchange");
+    let userName = document.el("username");
 
     function setUserName() {
         const myName = prompt("Please enter your name.");
