@@ -42,7 +42,7 @@ chatbotUI.init = function (bots) {
 
         botName.onclick = function () {
             bot = b;
-            botTitle.textContent = `${b.name}`;
+            botTitle.textContent = `! You're chatting with ${b.name}`;
             botNames.forEach(function (bn) {
                 bn.setAttribute("aria-selected", false);
             });
