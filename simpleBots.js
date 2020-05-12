@@ -3,12 +3,13 @@ const simpleBots = Object.create(null);
 let user = sessionStorage.getItem("name");
 
 const senateOptions = [
-    `It's over, ${user}! I have the high ground!`,
+    /*`It's over, ${user}! I have the high ground!`,
     "Hello there.",
     `General ${user}! You are a bold one.`,
     `Not just the men, but the women and ${user} too.`,
     "You have become the very thing swore to destroy!",
-    `Are you threatening me, Master ${user}?`
+    `Are you threatening me, Master ${user}?`*/
+    `Hi ${user}!`
 ];
 simpleBots.senateBot = {
     "name": "Senate Bot",
@@ -25,7 +26,7 @@ simpleBots.brennanBot = {
 simpleBots.botaro = {
     "name": "Botaro",
     "response": function (history) {
-        return `${history[history.length - 1]}? Oh yeah I had a crush on her in Year 8`;
+        return `${history[history.length - 1]}? Oh yeah I had a `;
     }
 };
 
