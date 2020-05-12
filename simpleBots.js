@@ -6,7 +6,7 @@ simpleBots.senateBot = {
         const senateOptions = [
             `It's over, ${user}! I have the high ground!`,
             "Hello there.",
-            `General ${user}! You are a bold one.`,
+            `GENERAL ${user.toUpperCase()}! You are a bold one.`,
             `Not just the men, but the women and ${user} too.`,
             "You have become the very thing swore to destroy!",
             `Are you threatening me, Master ${user}?`
