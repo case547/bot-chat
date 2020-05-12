@@ -13,7 +13,7 @@ chatbotUI.init = function (bots) {
         const myMessage = composition.value;
         composition.value = "";
         history.push(myMessage);
-        let user = localStorage.getItem("name");
+        const user = localStorage.getItem("name");
         const response = bot.response(history, user);
         history.push(response);
 
@@ -27,6 +27,13 @@ chatbotUI.init = function (bots) {
             theirMessage.textContent = response;
             messages.appendChild(theirTemplate);
             theirMessage.scrollIntoView();
+        }
+    };
+
+    composition.onkeydown = function (event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            el("send-button").click();
         }
     };
 
@@ -51,6 +58,12 @@ chatbotUI.init = function (bots) {
         if (i === 0) {
             botName.onclick();
         }
+
+        botName.onkeydown = function (event) {
+            if (event.key === "Enter") {
+                botName.click();
+            }
+        };
     });
 
     let myButton = el("userchange");
