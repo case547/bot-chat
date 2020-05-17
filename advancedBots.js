@@ -26,15 +26,15 @@ advancedBots.newCountdownBot = function (spec) {
 
 advancedBots.newMathBot = function () {
 
-    const hiddenFunction = function (x) {
-        return 42 * x;
+    const hidden = function (x) {
+        return 69 * x;
     };
 
     return {
         "name": "niceBot",
         "response": function (history) {
             const last = history[history.length - 1];
-            return `42 times ${history[history.length - 1]} is ` + hiddenFunction(last);
+            return `69 times ${history[history.length - 1]} is ` + hidden(last);
         }
     };
 };
