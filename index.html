@@ -28,13 +28,14 @@
                 </template>
             </section>
             <section>
-                <textarea id="composition" class="composition-pane"></textarea>
+                <textarea id="composition" class="composition-pane"
+                    aria-label="Compose message" placeholder="Say hello"></textarea>
                 <button id="send-button" class="composition-send">Send</button>
             </section>
         </main>
 
         <nav>
-            <ul id="bot-list">
+            <ul id="bot-list" role="listbox" aria-label="Bots online">
                 <template id="bot-listing">
                     <li name="bot" role="option" tabindex="0"> AgreeBot </li>
                 </template>
