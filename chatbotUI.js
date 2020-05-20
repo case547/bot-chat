@@ -60,7 +60,7 @@ chatbotUI.init = function (bots) {
         }
 
         botName.onkeydown = function (event) {
-            if (event.key === "Enter") {
+            if (event.key === "Enter" && event.shiftkey === false) {
                 botName.click();
             }
         };
