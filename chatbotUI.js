@@ -35,6 +35,7 @@ chatbotUI.init = function (bots) {
             event.preventDefault();
             el("send-button").click();
         }
+        return;
     };
 
     const botList = el("bot-list");
