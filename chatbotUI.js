@@ -34,8 +34,6 @@ chatbotUI.init = function (bots) {
         if (event.key === "Enter" && event.shiftkey === false) {
             event.preventDefault();
             el("send-button").click();
-        } else {
-        return;
         }
     };
 
