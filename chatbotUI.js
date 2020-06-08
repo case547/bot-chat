@@ -31,7 +31,7 @@ chatbotUI.init = function (bots) {
     };
 
     composition.onkeydown = function (event) {
-        if (event.key === "Enter" && event.shiftkey === false) {
+        if (event.key === "Enter") {
             event.preventDefault();
             el("send-button").click();
         }
