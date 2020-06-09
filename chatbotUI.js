@@ -31,10 +31,11 @@ chatbotUI.init = function (bots) {
     };
 
     composition.onkeydown = function (event) {
-        if (event.key === "Enter") {
-            event.preventDefault();
-            el("send-button").click();
+        if (event.key !== "Enter" || event.shiftKey) {
+            return;
         }
+        event.preventDefault();
+        el("send-button").click();
     };
 
     const botList = el("bot-list");
